@@ -2,7 +2,7 @@ rockchip-multimedia-config (1.0.3+noble) noble; urgency=medium
 
   * Update to 1.0.3
   * Changed trigger from libv4l2.so.0.0.0 to libv4l2.so
-  * Add support rk352x,rk3538,rk3539,rk357x,rk358x (add to rk358x group)
+  * Add support rk352x,rk3538,rk3539,rk357x,rk3582 (add to rk358x group)
   
   -- Dima7TW <admin@techweb.kh.ua> Wed, 26 Aug 2026 16:00:00 +0300
 
