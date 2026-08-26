@@ -1,6 +1,14 @@
 #!/bin/bash
 case "$(cat /proc/device-tree/compatible)" in
-	*rk3588*)
+	*rk358*)
+		{
+			echo "type=dec"
+			echo "codecs=VP8:VP9:H.264:H.265:AV1"
+			echo "max-width=7680"
+			echo "max-height=4320"
+		} > /dev/video-dec0
+		;;
+	*rk357*)
 		{
 			echo "type=dec"
 			echo "codecs=VP8:VP9:H.264:H.265:AV1"
@@ -16,6 +24,30 @@ case "$(cat /proc/device-tree/compatible)" in
 			echo "max-height=2160"
 		} > /dev/video-dec0
 		;;
+	*rk3539*)
+		{
+			echo "type=dec"
+			echo "codecs=VP8:VP9:H.264:H.265:AV1"
+			echo "max-width=3840"
+			echo "max-height=2160"
+		} > /dev/video-dec0
+		;;
+	*rk3538*)
+		{
+			echo "type=dec"
+			echo "codecs=VP8:VP9:H.264:H.265:AV1"
+			echo "max-width=1920"
+			echo "max-height=1080"
+		} > /dev/video-dec0
+		;;
+	*rk352*)
+		{
+			echo "type=dec"
+			echo "codecs=H.264:H.265"
+			echo "max-width=1920"
+			echo "max-height=1080"
+		} > /dev/video-dec0
+		;;		
 	*)
 		echo dec > /dev/video-dec0
 esac
