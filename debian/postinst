@@ -26,7 +26,11 @@ case "$1" in
 			fi
 			cp ${libv4l_filename} ${libdir}/libv4l2.so
 		fi
-		udevadm control --reload-rules
-		udevadm trigger
+		if [ -f /.dockerenv ]; then
+			return 0
+   	 	else
+			udevadm control --reload-rules
+                	udevadm trigger
+  		fi
 		;;
 esac

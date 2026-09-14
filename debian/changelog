@@ -1,3 +1,10 @@
+rockchip-multimedia-config (1.0.4+noble) noble; urgency=medium
+
+  * Update to 1.0.4
+  * Fix docker install
+
+ -- Dima7TW  <admin@techweb.kh.ua>  Mon, 14 Sep 2026 16:00:00 +0300
+
 rockchip-multimedia-config (1.0.3+noble) noble; urgency=medium
 
   * Update to 1.0.3
