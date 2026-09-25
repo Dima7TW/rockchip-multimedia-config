@@ -27,10 +27,10 @@ case "$1" in
 			cp ${libv4l_filename} ${libdir}/libv4l2.so
 		fi
 		if [ -f /.dockerenv ]; then
-			return 0
+			echo "install in docker; trigger update not needed"
    	 	else
 			udevadm control --reload-rules
-                	udevadm trigger
+            udevadm trigger
   		fi
 		;;
 esac
