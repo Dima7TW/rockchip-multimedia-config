@@ -1,6 +1,6 @@
 rockchip-multimedia-config (1.0.5+noble) noble; urgency=medium
 
-  * Update to 1.0.4
+  * Update to 1.0.5
   * Fix error "are the same file"
 
  -- Dima7TW  <admin@techweb.kh.ua>  Tue, 27 Oct 2026 15:40:00 +0200
