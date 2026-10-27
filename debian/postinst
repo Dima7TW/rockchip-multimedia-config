@@ -11,20 +11,20 @@ case "$1" in
 			if [ -L ${libdir}/libv4l2.so ];then
 				rm -f ${libdir}/libv4l2.so
 			fi
-			cp ${libv4l_filename} ${libdir}/libv4l2.so
+			cp ${libv4l_filename} ${libdir}/libv4l2.so || true
 		elif [ -d $libdir ];then
 			echo "dir already exist"
 			if [ -L ${libdir}/libv4l2.so ];then
 				rm -f ${libdir}/libv4l2.so
 			fi
-			cp ${libv4l_filename} ${libdir}/libv4l2.so
+			cp ${libv4l_filename} ${libdir}/libv4l2.so || true
 		else
 			echo "dir not exist"
 			ln -s /lib /usr/lib64
 			if [ -L ${libdir}/libv4l2.so ];then
 				rm -f ${libdir}/libv4l2.so
 			fi
-			cp ${libv4l_filename} ${libdir}/libv4l2.so
+			cp ${libv4l_filename} ${libdir}/libv4l2.so || true
 		fi
 		if [ -f /.dockerenv ]; then
 			echo "install in docker; trigger update not needed"
